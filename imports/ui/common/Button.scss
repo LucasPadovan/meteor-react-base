@@ -1,0 +1,65 @@
+.styled-button {
+    padding: 8px 32px;
+    font-size: 14px;
+    line-height: 21px;
+    background-color: white;
+    color: #FC40B6;
+    border-radius: 20px;
+    min-width: 160px;
+    height: 40px;
+    border: none;
+    outline: none;
+    text-align: center;
+    cursor: pointer;
+    white-space: nowrap;
+    box-shadow: 7px 7px 13px 0 rgba(0, 0, 0, 0.5);
+
+    transition: all 120ms ease-in-out;
+
+    &:hover,
+    &:focus {
+        outline: none;
+        box-shadow: 8px 8px 14px 0 rgba(0, 0, 0, 0.45);
+        transform: scale(1.01);
+    }
+
+    &:active {
+        outline: none;
+        box-shadow: 2px 2px 5px 0 rgba(0, 0, 0, 1);
+        transform: scale(0.99);
+    }
+
+    &:disabled {
+        box-shadow: 7px 7px 13px 0 rgba(0, 0, 0, 0.5);
+        cursor: default;
+        transform: none;
+    }
+
+    /* Sizes variants */
+    &--mini {
+        padding: 2px 8px;
+        font-size: 12px;
+        line-height: 18px;
+        border-radius: 14px;
+        min-width: 0px;
+        height: 28px;
+    }
+
+    &--small {
+        padding: 4px 16px;
+        font-size: 12px;
+        line-height: 18px;
+        border-radius: 15px;
+        min-width: 140px;
+        height: 30px;
+    }
+    /* Sizes variants */
+
+    /* Types variants */
+    &--primary,
+    &--primary a.styled-button__text {
+        background-color: #FC40B6;
+        color: white !important; // Sorry about the important, we should fix this when Bootstrap is out.
+    }
+    /* Types variants */
+}

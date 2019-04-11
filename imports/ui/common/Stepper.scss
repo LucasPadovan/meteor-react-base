@@ -1,0 +1,65 @@
+$cyan: #00FFF8;
+$violet: #9581D5;
+$rose: #FF1AB3;
+
+.stepper {
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.stepper__button {
+    position: relative;
+    background: none;
+    border: 2px solid $rose;
+    border-radius: 16px;
+    color: $rose;
+    width: 32px;
+    height: 32px;
+    margin: 0 10px;
+    cursor: pointer;
+
+    transition: all 120ms ease-in-out;
+
+    &:disabled {
+        cursor: default;
+        border-color: grey;
+        color: grey;
+    }
+
+    &:focus {
+        outline: none;
+        color: $cyan;
+        border-color: $cyan;
+    }
+
+    &:active {
+        transform: scale(0.90);
+        color: $violet;
+        border-color: $violet;
+
+        &:after {
+            font-size: 26px;
+        }
+    }
+
+    &:after {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        font-size: 28px;
+        line-height: 28px;
+    }
+
+    &--decrease:after {
+        content: "-";
+    }
+
+    &--increase:after {
+        content: "+";
+    }
+}

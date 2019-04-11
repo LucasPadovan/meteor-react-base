@@ -1,0 +1,16 @@
+.state-switcher {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    min-height: 58px;
+    width: 100%;
+    padding: 5px;
+}
+
+@media (min-width: 700px) {
+    .state-switcher {
+        justify-content: space-between;
+    }
+}

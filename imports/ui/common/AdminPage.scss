@@ -1,0 +1,12 @@
+.admin-page {
+    display: flex;
+    flex-wrap: nowrap;
+
+    .accordion-menu {
+        flex: 0 1 auto;
+    }
+
+    .admin-page__content {
+        flex: 1 1 auto;
+    }
+}

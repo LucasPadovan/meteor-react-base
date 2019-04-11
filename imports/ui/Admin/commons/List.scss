@@ -1,0 +1,44 @@
+.players-list__item-content {
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 5px 0;
+    width: 100%;
+}
+
+.players-list__item {
+    display: list-item;
+    position: relative;
+    border-radius: 5px;
+
+    &:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        opacity: 0;
+        z-index: -1;
+        background-image: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.5) 50%);
+        transition: all 120ms ease-in-out;
+    }
+
+    &:hover {
+        &:before {
+            opacity: 1;
+        }
+    }
+
+    &--overflow {
+        color: red;
+    }
+
+    &--unsaved {
+        color: yellow;
+    }
+}
+
+.players-list__info {
+    font-size: 12px;
+}

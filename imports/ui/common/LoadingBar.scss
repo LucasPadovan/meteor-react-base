@@ -1,0 +1,25 @@
+@keyframes left-right {
+    0% {left: -100%; right: 0%;}
+    50% {left: 0%; right: -100%;}
+    100% {left: -100%; right: 0%;}
+}
+
+.loading-bar {
+    height: 15px;
+    width: 100%;
+    background: #00FFF8;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 2px 10px 4px rgba(0, 255, 248, 0.07);
+}
+.loading-bar:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    background: linear-gradient(90deg, #00FFF8 0%, #FF1AB3 50%, #00FFF8 100%);
+    animation: 1s left-right infinite;
+}

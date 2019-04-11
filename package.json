@@ -1,0 +1,44 @@
+{
+  "name": "reactbase",
+  "private": true,
+  "eslintConfig": {
+    "extends": "@meteorjs/eslint-config-meteor"
+  },
+  "dependencies": {
+    "@babel/runtime": "^7.0.0-beta.46",
+    "bcrypt": "^2.0.1",
+    "classnames": "^2.2.5",
+    "meteor-node-stubs": "^0.3.2",
+    "moment": "^2.22.2",
+    "popper.js": "^1.14.3",
+    "prop-types": "^15.6.1",
+    "react": "^16.7.0-alpha.2",
+    "react-autosuggest": "^9.3.4",
+    "react-dates": "^16.7.0",
+    "react-dom": "^16.7.0-alpha.2",
+    "react-flip-move": "^3.0.2",
+    "react-router-dom": "^4.2.2"
+  },
+  "devDependencies": {
+    "babel-eslint": "^8.2.3",
+    "chai": "^4.2.0",
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-import-resolver-meteor": "^0.4.0",
+    "eslint-plugin-import": "^2.11.0",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-meteor": "^5.0.0",
+    "eslint-plugin-react": "^7.8.2",
+    "faker": "^4.1.0",
+    "lodash": "^4.17.11"
+  },
+  "scripts": {
+    "start": "meteor run",
+    "sasslint": "sass-lint --config .sass-lint.yml 'imports/**/*.scss' --verbose --no-exit",
+    "eslint": "eslint --cache --ignore-path .eslintignore ./imports",
+    "deploy": "cd .deploy; mup deploy; cd ..",
+    "lint": "npm run eslint ; npm run sasslint",
+    "tests": "meteor test --once --driver-package meteortesting:mocha --port 3100",
+    "tests:watch": "TEST_WATCH=1 meteor test --driver-package meteortesting:mocha --port 3100"
+  }
+}
