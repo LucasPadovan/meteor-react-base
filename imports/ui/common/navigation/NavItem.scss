@@ -1,0 +1,9 @@
+@import "../Theme.scss";
+@import "../Settings.scss";
+
+.nav-link {
+    color: $gray-15;
+    text-decoration: none;
+    padding: 0 10px;
+    font-size: $nav-text;
+}

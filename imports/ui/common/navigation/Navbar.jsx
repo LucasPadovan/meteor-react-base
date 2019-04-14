@@ -7,35 +7,35 @@ import {
 } from 'react-router-dom';
 import classNames from 'classnames';
 
-import NavItem from './navigation/NavItem';
-import DropdownNavItem from './navigation/DropdownNavItem';
-import MenuToggle from './navigation/MenuToggle';
+import NavItem from './NavItem';
+import DropdownNavItem from './DropdownNavItem';
+import MenuToggle from './MenuToggle';
 
-import { auth } from '../utils/authentication';
+import { auth } from '../../utils/authentication';
 
-import './Menu.scss';
+import './Navbar.scss';
 
 const PublicMenu = () => (
-    <ul className="navbar-nav">
+    <ul className="nav-menu">
         <NavItem title="Login" to="/login" />
     </ul>
 );
 
 const AdminMenu = ({ onLogoutClick }) => (
-    <ul className="navbar-nav">
+    <ul className="nav-menu">
         <NavItem title="Juegos" to="/admin/games" />
         <NavItem title="Logout" to="/" onClick={onLogoutClick} />
     </ul>
 );
 
 const AuthenticatedMenu = ({ user: { username }, onLogoutClick }) => (
-    <ul className="navbar-nav">
+    <ul className="nav-menu">
         <NavItem title={username} to="/" />
         <NavItem title="Logout" to="/" onClick={onLogoutClick} />
     </ul>
 );
 
-class Menu extends PureComponent {
+class Navbar extends PureComponent {
     static defaultProps = {
         user: {
             username: ''
@@ -83,13 +83,13 @@ class Menu extends PureComponent {
         }
 
         return (
-            <nav className="navbar navbar-expand navbar-light menu-container">
-                <div className="menu-wrapper">
-                    <Link className="navbar-brand" to="/">
-                        <span className="logo-e pr-2">
+            <nav className="nav-container">
+                <div className="nav-wrapper">
+                    <Link className="nav-item--brand" to="/">
+                        <span className="nav-item--brand-part">
                             React
                         </span>
-                        <span className="logo-sports">
+                        <span className="nav-item--brand-part">
                             base
                         </span>
                     </Link>
@@ -104,7 +104,7 @@ class Menu extends PureComponent {
 };
 
 
-const withRouterComponent = withRouter(Menu);
+const withRouterComponent = withRouter(Navbar);
 
 export default withTracker(() => {
     const userId = Meteor.userId();

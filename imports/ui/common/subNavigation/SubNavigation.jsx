@@ -33,7 +33,7 @@ export default class SubNavigation extends PureComponent {
 
         return (
             <nav className="navbar navbar-expand navbar-light">
-                <ul className="navbar-nav">
+                <ul className="nav-menu">
                     <SubNavItems items={items} />
                 </ul>
             </nav>

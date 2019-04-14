@@ -1,13 +1,13 @@
 import React, { PureComponent } from 'react';
 
-import Menu from '../common/Menu';
+import Navbar from '../common/navigation/Navbar';
 import Footer from '../common/Footer';
 
 class Layout extends PureComponent {
     render() {
         return (
             <div>
-                <Menu />
+                <Navbar />
 
                 <div className="page-container container py-4">
                     {this.props.children}
