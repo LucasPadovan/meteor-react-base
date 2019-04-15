@@ -1,9 +1,9 @@
 import React, { PureComponent } from 'react';
 import _ from 'lodash';
 
-import AccordionMenu from '/imports/ui/common/navigation/AccordionMenu';
+import AccordionMenu from './navigation/AccordionMenu';
 
-import { getMenuItems } from '/imports/ui/common/navigation/utils';
+import { getMenuItems } from './navigation/utils';
 
 import './AdminPage.scss';
 

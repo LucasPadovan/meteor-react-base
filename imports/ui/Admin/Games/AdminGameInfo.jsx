@@ -3,15 +3,15 @@ import { Meteor } from 'meteor/meteor';
 import { withTracker } from 'meteor/react-meteor-data';
 import { Redirect } from 'react-router-dom';
 
-import AdminPage from '/imports/ui/common/AdminPage';
-import Button from '/imports/ui/common/Button';
-import GradientDivisor from '/imports/ui/common/GradientDivisor';
-import ImageUploader from '/imports/ui/common/ImageUploader';
-import NotificationTemporary from '/imports/ui/common/NotificationTemporary';
+import AdminPage from '../../common/AdminPage';
+import Button from '../../common/Button';
+import GradientDivisor from '../../common/GradientDivisor';
+import ImageUploader from '../../common/ImageUploader';
+import NotificationTemporary from '../../common/NotificationTemporary';
 
-import { MENU_KEYS } from '/imports/ui/common/navigation/constants';
+import { MENU_KEYS } from '../../common/navigation/constants';
 
-import Games from '/imports/api/games';
+import Games from '../../../api/games';
 
 class AdminGameInfo extends React.Component {
     constructor(props) {

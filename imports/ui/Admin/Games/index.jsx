@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 
-import AdminPage from '/imports/ui/common/AdminPage';
-import GradientDivisor from '/imports/ui/common/GradientDivisor';
+import AdminPage from '../../common/AdminPage';
+import GradientDivisor from '../../common/GradientDivisor';
 
-import { MENU_KEYS } from '/imports/ui/common/navigation/constants';
+import { MENU_KEYS } from '../../common/navigation/constants';
 
 import AddGame from './AddGame';
 import GameList from './GameList';

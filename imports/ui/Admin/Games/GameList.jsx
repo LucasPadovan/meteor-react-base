@@ -3,10 +3,10 @@ import { Meteor } from 'meteor/meteor';
 import { withTracker } from 'meteor/react-meteor-data';
 import { Link } from 'react-router-dom';
 
-import Button from '/imports/ui/common/Button';
-import Table from '/imports/ui/common/Table';
+import Button from '../../common/Button';
+import Table from '../../common/Table';
 
-import Games from '/imports/api/games';
+import Games from '../../../api/games';
 
 
 const _buildGamesHeader = () => (

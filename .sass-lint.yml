@@ -3,8 +3,6 @@ options:
   merge-default-rules: false
 files:
   include: 'imports/scss/**/*.s+(a|c)ss'
-  ignore:
-    - 'imports/scss/_fonts.scss'
 rules:
   border-zero: 0
   class-name-format: 0

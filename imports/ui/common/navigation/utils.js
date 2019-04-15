@@ -1,4 +1,4 @@
-import { MINIMAL_MENU_ENABLED } from '/imports/ui/utils/flags';
+import { MINIMAL_MENU_ENABLED } from '../../utils/flags';
 
 import { MENU_KEYS } from './constants';
 

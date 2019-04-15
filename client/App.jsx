@@ -7,20 +7,18 @@ import {
 import 'react-dates/initialize';
 import 'react-dates/lib/css/_datepicker.css';
 
-import PrivateRoute from './PrivateRoute';
 import Layout from '../imports/ui/common/Layout';
 
 /* Public components */
 import Homepage from '../imports/ui/Public/Homepage/index';
-
 /* Admin components */
 import AdminGames from '../imports/ui/Admin/Games/index';
-
 {/* Manage routes */}
 import UsersList from '../imports/ui/Users/index';
 import NewUser from '../imports/ui/Users/NewUser';
-
 import Login from '../imports/ui/Accounts/Login';
+
+import PrivateRoute from './PrivateRoute';
 
 
 const Routes = () => (

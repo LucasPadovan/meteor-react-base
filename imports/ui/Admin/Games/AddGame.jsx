@@ -1,7 +1,7 @@
 import React, { PureComponent } from 'react';
 import { Meteor } from 'meteor/meteor';
 
-import Button from '/imports/ui/common/Button';
+import Button from '../../common/Button';
 
 export default class AddGame extends PureComponent {
     handleSubmit = (event) => {
