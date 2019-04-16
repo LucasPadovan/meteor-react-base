@@ -1,0 +1,21 @@
+@import "../Theme.scss";
+@import "../Settings.scss";
+
+$footer-padding: 30px;
+
+.footer-container {
+    align-items: center;
+    background-color: $footer-bg;
+    box-shadow: 0 2px 9px 1px rgba(0, 0, 0, 0.5);
+    color: $footer-text;
+    display: flex;
+    font-size: $medium-text;
+    justify-content: space-between;
+    line-height: $medium-lh;
+    padding: $footer-padding;
+}
+
+.footer-content {
+    text-align: center;
+    width: 100%;
+}

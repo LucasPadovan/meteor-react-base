@@ -7,7 +7,7 @@ import {
 import 'react-dates/initialize';
 import 'react-dates/lib/css/_datepicker.css';
 
-import Layout from '../imports/ui/common/Layout';
+import Layout from '../imports/ui/common/layouts/Layout';
 
 /* Public components */
 import Homepage from '../imports/ui/Public/Homepage/index';

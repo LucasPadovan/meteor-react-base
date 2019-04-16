@@ -1,0 +1,14 @@
+.page-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+
+    > nav,
+    > footer {
+        flex: 0 2 auto;
+    }
+}
+
+.page-body {
+    flex: 2 0 auto;
+}
