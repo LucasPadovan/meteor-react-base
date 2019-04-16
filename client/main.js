@@ -7,6 +7,8 @@ import { render } from 'react-dom';
 
 import App from './App';
 
+import './main.scss';
+
 Meteor.startup(() => {
     /* Setup locale from the very beginning */
     moment.locale('es', esLocale);

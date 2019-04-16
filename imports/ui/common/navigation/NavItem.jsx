@@ -14,7 +14,7 @@ export default class NavItem extends PureComponent {
             onClick,
         } = this.props;
         const itemClassName = classNames(
-            'nav-item px-4',
+            'nav-item',
             {
                 'active': isCurrentSection,
             },

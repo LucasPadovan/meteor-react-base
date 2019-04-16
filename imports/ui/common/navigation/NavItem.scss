@@ -1,9 +1,27 @@
 @import "../Theme.scss";
 @import "../Settings.scss";
 
+.nav-item {
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+}
+
 .nav-link {
     color: $gray-15;
-    text-decoration: none;
-    padding: 0 10px;
     font-size: $nav-text;
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: background-color 100ms ease-in-out;
+    will-change: background-color;
+
+    &:hover,
+    &:active,
+    &:focus,
+    &.active {
+        background-color: $gray-80;
+    }
 }

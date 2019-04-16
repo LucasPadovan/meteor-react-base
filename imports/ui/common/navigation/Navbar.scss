@@ -11,7 +11,7 @@
     margin: auto;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: stretch;
     padding: 10px 0;
 }
 
@@ -32,12 +32,17 @@
 .nav-menu {
     list-style: none;
     display: flex;
-    align-items: center;
+    align-items: stretch;
     justify-content: center;
 
     font-size: 14px;
     line-height: 21px;
     font-family: "beton-light";
+}
+
+.nav-menu-container {
+    display: flex;
+    align-items: stretch;
 }
 
 

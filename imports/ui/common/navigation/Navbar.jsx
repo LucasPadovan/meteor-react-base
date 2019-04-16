@@ -66,7 +66,7 @@ class Navbar extends PureComponent {
         const { user, isAuthenticated } = this.props;
         const { collapsed } = this.state;
         const menuClassName = classNames(
-            'collapse navbar-collapse menu',
+            'nav-menu-container nav-menu--collapsable',
             {
                 'show': collapsed,
             },
@@ -94,7 +94,7 @@ class Navbar extends PureComponent {
                         </span>
                     </Link>
 
-                    <div className={menuClassName} id="navbarSupportedContent">
+                    <div className={menuClassName}>
                         {menuItems}
                     </div>
                 </div>
