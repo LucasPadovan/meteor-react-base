@@ -1,0 +1,28 @@
+.enter {
+    opacity: 0.01;
+}
+
+.enter.enter-active {
+    opacity: 1;
+    transition: opacity 1s ease-in;
+}
+
+.exit {
+    opacity: 1;
+}
+
+.exit.exit-active {
+    opacity: 0.01;
+    transition: opacity 1s ease-in;
+}
+
+.transition-group {
+    position: relative;
+}
+
+.route-section {
+    // position: absolute;
+    // width: 100%;
+    // top: 0;
+    // left: 0;
+}

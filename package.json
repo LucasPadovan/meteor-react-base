@@ -18,7 +18,8 @@
     "react-dom": "^16",
     "react-flip-move": "^3.0.2",
     "react-hot-loader": "^4.3.4",
-    "react-router-dom": "^4.2.2"
+    "react-router-dom": "^4.2.2",
+    "react-transition-group": "^3.0.0"
   },
   "devDependencies": {
     "babel-core": "^6.26.3",

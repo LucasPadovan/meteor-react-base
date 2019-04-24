@@ -1,42 +1,27 @@
 import React from 'react';
-import {
-    BrowserRouter as Router,
-    Route,
-    Switch,
-} from 'react-router-dom';
+import { BrowserRouter as Router } from 'react-router-dom';
 import 'react-dates/initialize';
 import 'react-dates/lib/css/_datepicker.css';
 
-import Layout from '../imports/ui/common/layouts/Layout';
+import Navbar from '../imports/ui/common/navigation/Navbar';
+import Footer from '../imports/ui/common/Footer';
+import Container from './Container';
 
-/* Public components */
-import Homepage from '../imports/ui/Public/Homepage/index';
-/* Admin components */
-import AdminGames from '../imports/ui/Admin/Games/index';
-{/* Manage routes */}
-import UsersList from '../imports/ui/Users/index';
-import NewUser from '../imports/ui/Users/NewUser';
-import Login from '../imports/ui/Accounts/Login';
-
-import PrivateRoute from './PrivateRoute';
+import './App.scss';
 
 
-const Routes = () => (
+const App = () => (
     <Router>
-        <Switch>
-            <Layout>
-                <Route exact path="/" component={Homepage} />
-                <Route exact path="/login" component={Login} />
+        <div className="page-container">
+            <Navbar />
 
-                {/* Admin routes */}
-                <PrivateRoute exact path="/admin/games" component={AdminGames} />
+            <main className="page-body route-section">
+                <Container />
+            </main>
 
-                {/* Manage routes */}
-                <PrivateRoute exact path="/manage/users" component={UsersList} />
-                <PrivateRoute exact path="/manage/users/new" component={NewUser} />
-            </Layout>
-        </Switch>
+            <Footer />
+        </div>
     </Router>
 );
 
-export default Routes;
+export default App;

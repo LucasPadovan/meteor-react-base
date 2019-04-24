@@ -31,6 +31,7 @@ const AdminMenu = ({ onLogoutClick }) => (
 const AuthenticatedMenu = ({ user: { username }, onLogoutClick }) => (
     <ul className="nav-menu">
         <NavItem title={username} to="/" />
+        <NavItem title="Juegos" to="/admin/games" />
         <NavItem title="Logout" to="/" onClick={onLogoutClick} />
     </ul>
 );
