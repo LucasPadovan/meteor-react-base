@@ -4,7 +4,7 @@
 
 .enter.enter-active {
     opacity: 1;
-    transition: opacity 1s ease-in;
+    transition: opacity 240ms ease-in-out;
 }
 
 .exit {
@@ -13,16 +13,9 @@
 
 .exit.exit-active {
     opacity: 0.01;
-    transition: opacity 1s ease-in;
+    transition: opacity 240ms ease-in-out;
 }
 
-.transition-group {
-    position: relative;
-}
 
-.route-section {
-    // position: absolute;
-    // width: 100%;
-    // top: 0;
-    // left: 0;
-}
+// Try putting enter and exit in an absolute position
+// Try putting the container as absolute position

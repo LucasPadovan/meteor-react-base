@@ -21,29 +21,26 @@ import Login from '../imports/ui/Accounts/Login';
 import './Container.scss';
 
 
-const Container = () => {
-    console.log(location);
+const Container = () => (
+    <TransitionGroup className="transition-group">
+        <CSSTransition
+            key={location.href}
+            timeout={{ enter: 240, exit: 240 }}
+            exit={false}
+        >
+            <Switch location={location}>
+                <Route exact path="/" component={Homepage} />
+                <Route exact path="/login" component={Login} />
 
-    return (
-        <TransitionGroup className="transition-group">
-            <CSSTransition
-                key={location.href}
-                timeout={{ enter: 10000, exit: 10000 }}
-            >
-                <Switch location={location}>
-                    <Route exact path="/" component={Homepage} />
-                    <Route exact path="/login" component={Login} />
+                {/* Admin routes */}
+                <PrivateRoute exact path="/admin/games" component={AdminGames} />
 
-                    {/* Admin routes */}
-                    <PrivateRoute exact path="/admin/games" component={AdminGames} />
-
-                    {/* Manage routes */}
-                    <PrivateRoute exact path="/manage/users" component={UsersList} />
-                    <PrivateRoute exact path="/manage/users/new" component={NewUser} />
-                </Switch>
-            </CSSTransition>
-        </TransitionGroup>
-    );
-};
+                {/* Manage routes */}
+                <PrivateRoute exact path="/manage/users" component={UsersList} />
+                <PrivateRoute exact path="/manage/users/new" component={NewUser} />
+            </Switch>
+        </CSSTransition>
+    </TransitionGroup>
+);
 
 export default Container;
