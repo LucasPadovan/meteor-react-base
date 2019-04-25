@@ -15,7 +15,7 @@ const App = () => (
         <div className="page-container">
             <Navbar />
 
-            <main className="page-body route-section">
+            <main className="body-container route-section">
                 <Container />
             </main>
 

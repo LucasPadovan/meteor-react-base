@@ -16,6 +16,10 @@
     transition: opacity 240ms ease-in-out;
 }
 
-
-// Try putting enter and exit in an absolute position
-// Try putting the container as absolute position
+.body-content > div {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}

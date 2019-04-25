@@ -2,6 +2,7 @@ import React from 'react';
 import {
     Route,
     Switch,
+    withRouter,
 } from 'react-router-dom';
 import { TransitionGroup, CSSTransition } from 'react-transition-group';
 import 'react-dates/initialize';
@@ -21,12 +22,11 @@ import Login from '../imports/ui/Accounts/Login';
 import './Container.scss';
 
 
-const Container = () => (
-    <TransitionGroup className="transition-group">
+const Container = ({ location }) => (
+    <TransitionGroup className="body-content">
         <CSSTransition
-            key={location.href}
+            key={location.key}
             timeout={{ enter: 240, exit: 240 }}
-            exit={false}
         >
             <Switch location={location}>
                 <Route exact path="/" component={Homepage} />
@@ -43,4 +43,4 @@ const Container = () => (
     </TransitionGroup>
 );
 
-export default Container;
+export default withRouter(Container);
