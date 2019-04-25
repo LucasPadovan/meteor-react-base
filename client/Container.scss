@@ -1,20 +1,29 @@
+$animation-time: 240ms;
+
 @keyframes page-enter-to-right {
-    from {
-        transform: translate3d(-50%, 0, 0);
+    0% {
+        opacity: 0.01;
+        transform: translate3d(-100%, 0, 0);
     }
 
-    to {
+    100% {
+        opacity: 1;
         transform: translate3d(0, 0, 0);
     }
 }
 
 @keyframes page-leave-to-right {
-    from {
+    0% {
+        opacity: 1;
         transform: translate3d(0, 0, 0);
     }
 
-    to {
-        transform: translate3d(50%, 0, 0);
+    60% {
+        opacity: 0.01;
+    }
+
+    100% {
+        transform: translate3d(100%, 0, 0);
     }
 }
 
@@ -24,9 +33,10 @@
 
 .enter.enter-active {
     opacity: 1;
-    transition: opacity 240ms ease-in-out;
+    transition: opacity $animation-time ease-in-out;
     animation-name: page-enter-to-right;
-    animation-duration: 240ms;
+    animation-duration: $animation-time;
+    animation-timing-function: ease-in-out;
 }
 
 .exit {
@@ -35,9 +45,9 @@
 
 .exit.exit-active {
     opacity: 0.01;
-    transition: opacity 240ms ease-in-out;
     animation-name: page-leave-to-right;
-    animation-duration: 240ms;
+    animation-duration: $animation-time;
+    animation-timing-function: ease-in-out;
 }
 
 .body-content > div {

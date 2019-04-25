@@ -26,7 +26,7 @@ const Container = ({ location }) => (
     <TransitionGroup className="body-content">
         <CSSTransition
             key={location.key}
-            timeout={{ enter: 240, exit: 240 }}
+            timeout={{ enter: 250, exit: 250 }}
         >
             <Switch location={location}>
                 <Route exact path="/" component={Homepage} />
