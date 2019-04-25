@@ -1,3 +1,23 @@
+@keyframes page-enter-to-right {
+    from {
+        transform: translate3d(-50%, 0, 0);
+    }
+
+    to {
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+@keyframes page-leave-to-right {
+    from {
+        transform: translate3d(0, 0, 0);
+    }
+
+    to {
+        transform: translate3d(50%, 0, 0);
+    }
+}
+
 .enter {
     opacity: 0.01;
 }
@@ -5,6 +25,8 @@
 .enter.enter-active {
     opacity: 1;
     transition: opacity 240ms ease-in-out;
+    animation-name: page-enter-to-right;
+    animation-duration: 240ms;
 }
 
 .exit {
@@ -14,6 +36,8 @@
 .exit.exit-active {
     opacity: 0.01;
     transition: opacity 240ms ease-in-out;
+    animation-name: page-leave-to-right;
+    animation-duration: 240ms;
 }
 
 .body-content > div {
