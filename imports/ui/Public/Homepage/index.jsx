@@ -1,10 +1,16 @@
 import React from 'react';
 
+import Footer from '../../common/Footer';
+
 import './index.scss';
 
 const MainLanding = () => (
-    <div>
-        <h1>I'm a Homepage</h1>
+    <div className="homepage">
+        <main className="homepage-main">
+            <h1>I'm a Homepage</h1>
+        </main>
+
+        <Footer />
     </div>
 );
 

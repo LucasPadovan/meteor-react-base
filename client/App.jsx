@@ -4,7 +4,6 @@ import 'react-dates/initialize';
 import 'react-dates/lib/css/_datepicker.css';
 
 import Navbar from '../imports/ui/common/navigation/Navbar';
-import Footer from '../imports/ui/common/Footer';
 import Container from './Container';
 
 import './App.scss';
@@ -15,11 +14,9 @@ const App = () => (
         <div className="page-container">
             <Navbar />
 
-            <main className="body-container route-section">
+            <div className="body-container">
                 <Container />
-            </main>
-
-            <Footer />
+            </div>
         </div>
     </Router>
 );

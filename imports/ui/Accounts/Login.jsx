@@ -97,10 +97,8 @@ class Login extends PureComponent {
         }
 
         return (
-            <div className="row">
-                <div className="offset-md-4 col-md-4">
-                    {body}
-                </div>
+            <div>
+                {body}
             </div>
         );
     }
