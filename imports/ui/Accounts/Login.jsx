@@ -4,6 +4,7 @@ import React, { PureComponent } from 'react';
 import { Redirect, withRouter } from 'react-router-dom';
 
 import { auth } from '../utils/authentication';
+import InputField from '../common/InputField';
 
 class Login extends PureComponent {
     constructor(props) {
@@ -62,7 +63,7 @@ class Login extends PureComponent {
             <form onSubmit={this._handleLoginSubmit.bind(this)}>
                 <div className="form-group">
                     <label htmlFor="username-input">Nombre de usuario</label>
-                    <input
+                    <InputField
                         type="text"
                         className="form-control"
                         id="username-input"
@@ -75,7 +76,7 @@ class Login extends PureComponent {
                 </div>
                 <div className="form-group">
                     <label htmlFor="password-input">Contraseña</label>
-                    <input
+                    <InputField
                         type="password"
                         className="form-control"
                         id="password-input"

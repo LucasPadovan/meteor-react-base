@@ -1,0 +1,19 @@
+@import "./Theme.scss";
+@import "./Settings.scss";
+
+.input-container input {
+    border-radius: 4px;
+    background-color: white;
+    font-size: 14px;
+    line-height: 21px;
+    border: 2px solid $ui-disabled;
+    padding: 5px 10px;
+    outline: none;
+
+    &:active,
+    &:focus {
+        outline: none;
+        background: white;
+        border-color: $ui-active;
+    }
+}

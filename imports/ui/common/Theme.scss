@@ -1,6 +1,6 @@
 /* START: Colors */
-$brand-primary: green;
-$brand-secondary: red;
+$brand-primary: limegreen;
+$brand-secondary: violet;
 
 $white: #ffffff;
 $gray-98: #f3f3f3;
@@ -19,6 +19,10 @@ $gray-20: #363636;
 $gray-15: #222222;
 $gray-10: #171717;
 $black: #000000;
+
+$ui-active: green;
+$ui-disabled: $gray-45;
+
 /* END: Colors */
 
 /* START: Navbar */
