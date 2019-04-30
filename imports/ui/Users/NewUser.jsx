@@ -51,7 +51,7 @@ function NewUser() {
                     autoComplete="off"
                     value={username}
                     onChange={onUsernameChange}
-                    label="Nombre"
+                    labelText="Nombre"
                 />
             </div>
 
@@ -64,7 +64,7 @@ function NewUser() {
                     autoComplete="password"
                     value={password}
                     onChange={onPasswordChange}
-                    label="Contraseña"
+                    labelText="Contraseña"
                 />
             </div>
 

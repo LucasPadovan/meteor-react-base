@@ -71,7 +71,7 @@ class Login extends PureComponent {
                         autoComplete="username"
                         value={this.state.email}
                         onChange={this._handleEmailChange.bind(this)}
-                        label="Nombre de usuario"
+                        labelText="Nombre de usuario"
                     />
                 </div>
                 <div className="form-group">
@@ -83,7 +83,7 @@ class Login extends PureComponent {
                         autoComplete="password"
                         value={this.state.password}
                         onChange={this._handlePasswordChange.bind(this)}
-                        label="Contraseña"
+                        labelText="Contraseña"
                     />
                 </div>
                 {loginFailedComponent}

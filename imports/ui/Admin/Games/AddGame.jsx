@@ -34,7 +34,7 @@ export default class AddGame extends PureComponent {
                                 type="text"
                                 name="gameName"
                                 placeholder="Nombre del juego"
-                                label="Nombre del juego"
+                                labelText="Nombre del juego"
                                 id="gameName"
                             />
                         </div>
@@ -44,7 +44,7 @@ export default class AddGame extends PureComponent {
                                 type="text"
                                 name="gameLogo"
                                 placeholder="Descripción del juego"
-                                label="Descripción del juego"
+                                labelText="Descripción del juego"
                                 id="gameLogo"
                             />
                         </div>

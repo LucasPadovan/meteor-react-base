@@ -4,16 +4,16 @@ import PropTypes from 'prop-types';
 import './InputField.scss';
 
 
-const InputField = ({ label, id, ...inputProps }) => (
+const InputField = ({ labelText, id, ...inputProps }) => (
     <div className="input-container">
-        <label htmlFor={id}>{label}</label>
+        <label htmlFor={id}>{labelText}</label>
         <input id={id} {...inputProps} />
     </div>
 );
 
 InputField.propTypes = {
-    label: PropTypes.isRequired,
-    id: PropTypes.isRequired,
+    labelText: PropTypes.string.isRequired,
+    id: PropTypes.string.isRequired,
 };
 
 export default InputField;

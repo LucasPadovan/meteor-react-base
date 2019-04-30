@@ -121,7 +121,7 @@ class AdminGameInfo extends React.Component {
                                         value={this.state.doc.name}
                                         onChange={this._handleChangeField}
                                         id="game-info-name"
-                                        label="Nombre"
+                                        labelText="Nombre"
                                     />
                                 </div>
                             </div>
@@ -137,14 +137,14 @@ class AdminGameInfo extends React.Component {
                                         value={this.state.doc.description}
                                         onChange={this._handleChangeField}
                                         id="game-info-description"
-                                        label="Descripción"
+                                        labelText="Descripción"
                                     />
                                 </div>
                             </div>
                         </div>
                         <div className="row">
                             <div className="col-md-6">
-                                <ImageUploader label="Imagen" placeholder="URL de la imagen" image={this.state.doc.image} onImageChange={this._handleImageChange} />
+                                <ImageUploader labelText="Imagen" placeholder="URL de la imagen" image={this.state.doc.image} onImageChange={this._handleImageChange} />
                             </div>
                         </div>
                         <div className="row">
