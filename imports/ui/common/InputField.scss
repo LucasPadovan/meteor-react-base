@@ -1,19 +1,30 @@
 @import "./Theme.scss";
 @import "./Settings.scss";
 
-.input-container input {
-    border-radius: 4px;
-    background-color: white;
-    font-size: 14px;
-    line-height: 21px;
-    border: 2px solid $ui-disabled;
-    padding: 5px 10px;
-    outline: none;
+$input-border-width: 2px;
+$input-padding: 5px 10px;
 
-    &:active,
-    &:focus {
+.input-container {
+    input {
+        border-radius: $grid-unit;
+        background-color: white;
+        font-size: $normal-text;
+        line-height: $normal-lh;
+        border: $input-border-width solid $ui-disabled;
+        padding: $input-padding;
         outline: none;
-        background: white;
-        border-color: $ui-active;
+        display: flex;
+        flex-direction: column;
+
+        &:active,
+        &:focus {
+            outline: none;
+            background: white;
+            border-color: $ui-active;
+        }
+    }
+
+    label {
+        font-weight: $bold-text-w;
     }
 }

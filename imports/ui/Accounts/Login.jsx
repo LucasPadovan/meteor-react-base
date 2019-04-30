@@ -62,7 +62,6 @@ class Login extends PureComponent {
         let body = (
             <form onSubmit={this._handleLoginSubmit.bind(this)}>
                 <div className="form-group">
-                    <label htmlFor="username-input">Nombre de usuario</label>
                     <InputField
                         type="text"
                         className="form-control"
@@ -72,10 +71,10 @@ class Login extends PureComponent {
                         autoComplete="username"
                         value={this.state.email}
                         onChange={this._handleEmailChange.bind(this)}
+                        label="Nombre de usuario"
                     />
                 </div>
                 <div className="form-group">
-                    <label htmlFor="password-input">Contraseña</label>
                     <InputField
                         type="password"
                         className="form-control"
@@ -84,6 +83,7 @@ class Login extends PureComponent {
                         autoComplete="password"
                         value={this.state.password}
                         onChange={this._handlePasswordChange.bind(this)}
+                        label="Contraseña"
                     />
                 </div>
                 {loginFailedComponent}

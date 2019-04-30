@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import InputField from '../common/InputField';
 
 function useFormInput(initialValue) {
     const [value, setValue] = useState(initialValue);
@@ -41,8 +42,7 @@ function NewUser() {
     return (
         <form onSubmit={_handleSubmit}>
             <div className="form-group">
-                <label htmlFor="username-input">Username</label>
-                <input
+                <InputField
                     type="text"
                     className="form-control"
                     id="username-input"
@@ -51,11 +51,11 @@ function NewUser() {
                     autoComplete="off"
                     value={username}
                     onChange={onUsernameChange}
+                    label="Nombre"
                 />
             </div>
 
             <div className="form-group">
-                <label htmlFor="password-input">Contraseña</label>
                 <input
                     type="password"
                     className="form-control"
@@ -64,11 +64,12 @@ function NewUser() {
                     autoComplete="password"
                     value={password}
                     onChange={onPasswordChange}
+                    label="Contraseña"
                 />
             </div>
 
             <button className="btn btn-primary">
-                Create user
+                Crear usuario
             </button>
         </form>
     );

@@ -2,6 +2,7 @@ import React, { PureComponent } from 'react';
 import { Meteor } from 'meteor/meteor';
 
 import Button from '../../common/Button';
+import InputField from '../../common/InputField';
 
 export default class AddGame extends PureComponent {
     handleSubmit = (event) => {
@@ -28,10 +29,24 @@ export default class AddGame extends PureComponent {
                 <form className="admin-index-form__form" onSubmit={this.handleSubmit}>
                     <div className="admin-index-form__fields">
                         <div className="admin-index-form__field">
-                            <input className="form-control" type="text" name="gameName" placeholder="Nombre del juego" />
+                            <InputField
+                                className="form-control"
+                                type="text"
+                                name="gameName"
+                                placeholder="Nombre del juego"
+                                label="Nombre del juego"
+                                id="gameName"
+                            />
                         </div>
                         <div className="admin-index-form__field">
-                            <input className="form-control" type="text" name="gameLogo" placeholder="Descripción del juego" />
+                            <InputField
+                                className="form-control"
+                                type="text"
+                                name="gameLogo"
+                                placeholder="Descripción del juego"
+                                label="Descripción del juego"
+                                id="gameLogo"
+                            />
                         </div>
                     </div>
                     <div className="admin-index-form__actions">

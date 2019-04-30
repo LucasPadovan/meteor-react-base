@@ -12,6 +12,7 @@ import NotificationTemporary from '../../common/NotificationTemporary';
 import { MENU_KEYS } from '../../common/navigation/constants';
 
 import Games from '../../../api/games';
+import InputField from '../../common/InputField';
 
 class AdminGameInfo extends React.Component {
     constructor(props) {
@@ -112,16 +113,32 @@ class AdminGameInfo extends React.Component {
                         <div className="row">
                             <div className="col-md-6">
                                 <div className="form-group">
-                                    <label htmlFor="name">Nombre</label>
-                                    <input className="form-control" type="text" name="name" placeholder="Nombre" value={this.state.doc.name} onChange={this._handleChangeField} />
+                                    <InputField
+                                        className="form-control"
+                                        type="text"
+                                        name="name"
+                                        placeholder="Nombre"
+                                        value={this.state.doc.name}
+                                        onChange={this._handleChangeField}
+                                        id="game-info-name"
+                                        label="Nombre"
+                                    />
                                 </div>
                             </div>
                         </div>
                         <div className="row">
                             <div className="col-md-6">
                                 <div className="form-group">
-                                    <label htmlFor="description">Descripción</label>
-                                    <input className="form-control" type="text" name="description" placeholder="Descripción" value={this.state.doc.description} onChange={this._handleChangeField} />
+                                    <InputField
+                                        className="form-control"
+                                        type="text"
+                                        name="description"
+                                        placeholder="Descripción"
+                                        value={this.state.doc.description}
+                                        onChange={this._handleChangeField}
+                                        id="game-info-description"
+                                        label="Descripción"
+                                    />
                                 </div>
                             </div>
                         </div>
