@@ -5,6 +5,7 @@ import { Redirect, withRouter } from 'react-router-dom';
 
 import { auth } from '../utils/authentication';
 import InputField from '../common/InputField';
+import Button from '../common/Button';
 
 class Login extends PureComponent {
     constructor(props) {
@@ -87,9 +88,10 @@ class Login extends PureComponent {
                     />
                 </div>
                 {loginFailedComponent}
-                <button type="submit" className="btn btn-primary">
-                    Login
-                </button>
+                <Button
+                    text="Login"
+                    type="submit"
+                />
             </form>
         );
 

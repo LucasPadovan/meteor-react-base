@@ -1,7 +1,4 @@
 /* START: Colors */
-$brand-primary: limegreen;
-$brand-secondary: violet;
-
 $white: #ffffff;
 $gray-98: #f3f3f3;
 $gray-95: #EDEDED;
@@ -21,7 +18,15 @@ $gray-10: #171717;
 $black: #000000;
 
 $ui-active: green;
+$ui-active--contrast: $white;
+$ui-active--darken: darken($ui-active, 10%);
 $ui-disabled: $gray-45;
+$ui-disabled--contrast: $white;
+$ui-disabled--darken: darken($ui-disabled, 10%);
+
+$brand-primary: limegreen;
+$brand-secondary: violet;
+
 
 /* END: Colors */
 

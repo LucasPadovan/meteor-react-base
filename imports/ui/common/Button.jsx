@@ -78,7 +78,7 @@ export default class Button extends PureComponent {
                 {...passingProps}
             >
                 {icon}
-                <span className="styled-button__text font-beton-bold">{text}</span>
+                <span className="styled-button__text">{text}</span>
             </ButtonSubComponent>
         );
     }

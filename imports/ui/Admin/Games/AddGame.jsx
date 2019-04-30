@@ -28,7 +28,7 @@ export default class AddGame extends PureComponent {
             <section className="admin-index-form__section">
                 <form className="admin-index-form__form" onSubmit={this.handleSubmit}>
                     <div className="admin-index-form__fields">
-                        <div className="admin-index-form__field">
+                        <div className="admin-index-form__field p-b-4">
                             <InputField
                                 className="form-control"
                                 type="text"
@@ -38,7 +38,7 @@ export default class AddGame extends PureComponent {
                                 id="gameName"
                             />
                         </div>
-                        <div className="admin-index-form__field">
+                        <div className="admin-index-form__field p-b-4">
                             <InputField
                                 className="form-control"
                                 type="text"
@@ -49,7 +49,7 @@ export default class AddGame extends PureComponent {
                             />
                         </div>
                     </div>
-                    <div className="admin-index-form__actions">
+                    <div className="admin-index-form__actions p-b-4">
                         <Button type="submit" variant="primary" text="Agregar Juego" />
                     </div>
                 </form>
