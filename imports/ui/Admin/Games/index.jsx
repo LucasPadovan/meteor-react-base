@@ -24,7 +24,3 @@ export default class AdminGames extends Component {
         );
     }
 }
-
-AdminGames.propTypes = {
-
-};

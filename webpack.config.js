@@ -1,9 +1,15 @@
 const webpack = require('webpack');
+const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const meteorExternals = require('webpack-meteor-externals');
 
 const clientConfig = {
     entry: './client/main.js',
+    output: {
+        path: path.resolve(__dirname, 'public'),
+        filename: 'bundle.js',
+        publicPath: '/',
+    },
     module: {
         rules: [{
             test: /\.(js|jsx)$/,
