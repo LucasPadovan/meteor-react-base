@@ -1,4 +1,4 @@
-import { MINIMAL_MENU_ENABLED } from '../../utils/flags';
+import { MINIMAL_MENU_ENABLED } from '../../settings/flags';
 
 import { MENU_KEYS } from './constants';
 

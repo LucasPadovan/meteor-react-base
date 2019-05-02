@@ -3,7 +3,8 @@ import { BrowserRouter as Router } from 'react-router-dom';
 import 'react-dates/initialize';
 import 'react-dates/lib/css/_datepicker.css';
 
-import Navbar from '../imports/ui/common/navigation/Navbar';
+import Navbar from 'ds/basic/navigation/Navbar';
+
 import Container from './Container';
 
 import './App.scss';

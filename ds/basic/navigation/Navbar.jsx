@@ -11,7 +11,7 @@ import NavItem from './NavItem';
 import DropdownNavItem from './DropdownNavItem';
 import MenuToggle from './MenuToggle';
 
-import { auth } from '../../utils/authentication';
+import { auth } from '../../../imports/ui/utils/authentication';
 
 import './Navbar.scss';
 

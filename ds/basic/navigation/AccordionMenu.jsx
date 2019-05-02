@@ -1,7 +1,7 @@
 import React, { PureComponent } from 'react';
 import classNames from 'classnames';
 
-import Button from 'ds/basic/Button';
+import Button from '../Button';
 
 import './AccordionMenu.scss';
 
