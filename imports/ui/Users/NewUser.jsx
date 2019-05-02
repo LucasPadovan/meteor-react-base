@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import InputField from '../common/InputField';
+import InputField from 'ds/basic/InputField';
 
 function useFormInput(initialValue) {
     const [value, setValue] = useState(initialValue);

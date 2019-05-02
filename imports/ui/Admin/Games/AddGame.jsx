@@ -1,8 +1,7 @@
 import React, { PureComponent } from 'react';
 import { Meteor } from 'meteor/meteor';
 import Button from 'ds/basic/Button';
-
-import InputField from '../../common/InputField';
+import InputField from 'ds/basic/InputField';
 
 export default class AddGame extends PureComponent {
     handleSubmit = (event) => {

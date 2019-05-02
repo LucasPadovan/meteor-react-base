@@ -3,9 +3,9 @@ import { withTracker } from 'meteor/react-meteor-data';
 import React, { PureComponent } from 'react';
 import { Redirect, withRouter } from 'react-router-dom';
 import Button from 'ds/basic/Button';
+import InputField from 'ds/basic/InputField';
 
 import { auth } from '../utils/authentication';
-import InputField from '../common/InputField';
 
 class Login extends PureComponent {
     constructor(props) {
