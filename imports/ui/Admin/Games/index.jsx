@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
+import GradientDivisor from 'ds/basic/GradientDivisor';
 
 import AdminPage from '../../common/AdminPage';
-import GradientDivisor from '../../common/GradientDivisor';
 
 import { MENU_KEYS } from '../../common/navigation/constants';
 
@@ -16,7 +16,7 @@ export default class AdminGames extends Component {
             >
                 <div className="admin-index-view">
                     <h1>Administrador de juegos</h1>
-                    <GradientDivisor />
+                    <GradientDivisor marginVertical={3} />
                     <AddGame />
                     <GameList />
                 </div>
