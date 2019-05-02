@@ -1,7 +1,7 @@
 import React, { PureComponent } from 'react';
 import _ from 'lodash';
+import Button from 'ds/basic/Button';
 
-import Button from '/imports/ui/common/Button';
 import Table from '/imports/ui/common/Table';
 
 import '/imports/ui/Admin/commons/List.scss';

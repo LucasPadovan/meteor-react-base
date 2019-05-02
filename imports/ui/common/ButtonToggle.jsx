@@ -1,6 +1,5 @@
 import React, { PureComponent } from 'react';
-
-import Button from '/imports/ui/common/Button';
+import Button from 'ds/basic/Button';
 
 export default class ButtonToggle extends PureComponent {
     render() {

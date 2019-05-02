@@ -2,9 +2,9 @@ import React from 'react';
 import { Meteor } from 'meteor/meteor';
 import { withTracker } from 'meteor/react-meteor-data';
 import { Redirect } from 'react-router-dom';
+import Button from 'ds/basic/Button';
 
 import AdminPage from '../../common/AdminPage';
-import Button from '../../common/Button';
 import GradientDivisor from '../../common/GradientDivisor';
 import ImageUploader from '../../common/ImageUploader';
 import NotificationTemporary from '../../common/NotificationTemporary';

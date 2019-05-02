@@ -32,7 +32,11 @@ const clientConfig = {
         new webpack.HotModuleReplacementPlugin(),
     ],
     resolve: {
+        modules: [path.resolve(__dirname, 'ds'), 'node_modules'],
         extensions: ['*', '.js', '.jsx'],
+        alias: {
+            ds: path.resolve(__dirname, 'ds'),
+        },
     },
     externals: [
         meteorExternals(),

@@ -1,6 +1,6 @@
 import React, { PureComponent } from 'react';
 
-import Button from '/imports/ui/common/Button';
+import Button from 'ds/basic/Button';
 
 import './StateSwitcher.scss';
 

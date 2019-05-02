@@ -1,7 +1,7 @@
 import React, { PureComponent } from 'react';
 import _ from 'lodash';
 
-import Button from '/imports/ui/common/Button';
+import Button from 'ds/basic/Button';
 
 import { RESOURCES_STATUS } from '/imports/ui/Admin/constants';
 

@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { Redirect } from 'react-router-dom';
+import Button from 'ds/basic/Button';
 
-import Button from '/imports/ui/common/Button';
 import GradientDivisor from '/imports/ui/common/GradientDivisor';
 import NotificationTemporary from '/imports/ui/common/NotificationTemporary';
 
