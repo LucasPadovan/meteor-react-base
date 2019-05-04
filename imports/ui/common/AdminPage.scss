@@ -1,3 +1,7 @@
+@import "../../../ds/settings/Theme.scss";
+@import "../../../ds/settings/Settings.scss";
+@import "../../../ds/settings/Helpers.scss";
+
 .admin-page {
     display: flex;
     flex-wrap: nowrap;
@@ -8,6 +12,15 @@
     }
 
     .admin-page__content {
+        @extend .p-5;
+
         flex: 1 1 auto;
+    }
+}
+
+@media(min-width: $medium-w) {
+    .admin-page__content {
+        padding-left: $grid-unit * 10;
+        padding-right: $grid-unit * 10;
     }
 }

@@ -2,13 +2,12 @@
 @import "../../settings/Settings.scss";
 
 .accordion-menu {
-    background-color: black;
+    background-color: $gray-10;
     border-radius: $grid-unit;
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
     left: 0;
-    margin-right: 20px;
     min-width: 200px;
     overflow: hidden;
     position: fixed;
@@ -33,19 +32,19 @@ a.accordion-menu__link {
     font-size: 18px;
     padding: $grid-unit 0;
     border-right: $grid-unit solid transparent;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: $gray-30;
     cursor: pointer;
 
     transition: all 200ms ease-in-out;
 
     &:hover {
         border-right: $grid-unit solid $brand-primary;
-        background-color: rgba(0, 0, 0, 0.2);
+        background-color: $gray-20;
     }
 
     &--active {
         border-right: $grid-unit solid grey;
-        background-color: rgba(0, 0, 0, 0.2);
+        background-color: $gray-20;
     }
 }
 
@@ -67,7 +66,6 @@ a.accordion-menu__link {
 
 @media (min-width: 800px) {
     .accordion-menu {
-        background-color: rgba(0, 0, 0, 0.5);
         left: auto;
         position: relative;
         transform: none;
