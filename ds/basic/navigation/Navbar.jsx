@@ -85,8 +85,8 @@ class Navbar extends PureComponent {
 
         return (
             <nav className="nav-container">
-                <div className="nav-wrapper">
-                    <Link className="nav-item--brand" to="/">
+                <div className="nav-wrapper p-h-3">
+                    <Link className="nav-item--brand m-v-3" to="/">
                         <span className="nav-item--brand-part">
                             React
                         </span>

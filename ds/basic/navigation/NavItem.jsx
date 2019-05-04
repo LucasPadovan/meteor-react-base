@@ -22,7 +22,7 @@ export default class NavItem extends PureComponent {
 
         return (
             <li className={itemClassName}>
-                <Link className="nav-link" to={to} onClick={onClick}>{title}</Link>
+                <Link className="nav-link p-h-3" to={to} onClick={onClick}>{title}</Link>
             </li>
         );
     }
