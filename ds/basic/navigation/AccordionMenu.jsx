@@ -45,7 +45,7 @@ const MenuItems = ({ items, currentSection, currentSubSection }) => (
         const isCurrentSection = key === currentSection;
         const shouldShowSubMenu = subMenuItems.length && isCurrentSection && currentSubSection;
         const menuItemClassNames = classNames(
-            'accordion-menu__item',
+            'accordion-menu__item p-3',
             {
                 'accordion-menu__item--active': isCurrentSection,
             },

@@ -21,10 +21,8 @@
     }
 }
 
-a.accordion-menu__link {
-    display: block;
+.accordion-menu__link {
     color: white;
-    padding: 10px;
 }
 
 .accordion-menu__item {
@@ -32,18 +30,19 @@ a.accordion-menu__link {
     font-size: 18px;
     padding: $grid-unit 0;
     border-right: $grid-unit solid transparent;
-    background-color: $gray-30;
+    background-color: $gray-40;
     cursor: pointer;
 
     transition: all 200ms ease-in-out;
+    a {}
 
     &:hover {
         border-right: $grid-unit solid $brand-primary;
-        background-color: $gray-20;
+        background-color: $gray-30;
     }
 
     &--active {
-        border-right: $grid-unit solid grey;
+        border-right: $grid-unit solid $brand-secondary;
         background-color: $gray-20;
     }
 }
@@ -64,7 +63,7 @@ a.accordion-menu__link {
     }
 }
 
-@media (min-width: 800px) {
+@media (min-width: $medium-w) {
     .accordion-menu {
         left: auto;
         position: relative;
