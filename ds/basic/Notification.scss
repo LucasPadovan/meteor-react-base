@@ -1,3 +1,6 @@
+@import "../settings/Theme.scss";
+@import "../settings/Settings.scss";
+
 @keyframes appear {
     0% {
         opacity: 0;
@@ -34,9 +37,9 @@
 
 .floating-notification {
     align-items: center;
-    background: #282C35;
-    border-radius: 5px;
-    border: 3px solid white;
+    background: $gray-20;
+    border-radius: $grid-unit;
+    border: 3px solid $white;
     display: flex;
     font-size: 16px;
     justify-content: space-around;
@@ -59,22 +62,22 @@
     }
 
     &--success {
-        border-color: green;
-        color: green;
+        border-color: $ui-success;
+        color: $ui-success;
     }
 
     &--error {
-        border-color: red;
-        color: #b13c3c;
+        border-color: $ui-danger;
+        color: $ui-danger;
     }
 
     &--info {
-        border-color: cyan;
-        color: cyan;
+        border-color: $ui-info;
+        color: $ui-info;
     }
 
     &--alert {
-        border-color: yellow;
-        color: yellow;
+        border-color: $ui-warning;
+        color: $ui-warning;
     }
 }

@@ -47,12 +47,12 @@ export default class DsIndex extends Component {
                         <Stepper />
                     </section>
 
-                    <section className="p-b-10  ">
+                    <section className="p-b-10">
                         <h2 className="p-b-3">Loading bar component</h2>
                         <LoadingBar />
                     </section>
 
-                    <section className="p-b-10  ">
+                    <section className="p-b-10">
                         <h2 className="p-b-3">Pill component</h2>
                         <Pill text="A pill component" />
                     </section>

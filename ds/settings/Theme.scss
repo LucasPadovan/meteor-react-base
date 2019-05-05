@@ -24,6 +24,11 @@ $ui-disabled: $gray-45;
 $ui-disabled--contrast: $white;
 $ui-disabled--darken: darken($ui-disabled, 10%);
 
+$ui-warning: yellow;
+$ui-danger: #b13c3c;
+$ui-success: green;
+$ui-info: cyan;
+
 $brand-primary: limegreen;
 $brand-secondary: violet;
 
