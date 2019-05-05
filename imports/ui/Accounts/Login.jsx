@@ -74,6 +74,7 @@ class Login extends PureComponent {
                     value={this.state.email}
                     onChange={this._handleEmailChange}
                     labelText="Nombre de usuario"
+                    autoFocus={true}
                 />
                 <InputField
                     type="password"

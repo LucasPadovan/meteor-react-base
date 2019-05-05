@@ -35,6 +35,7 @@ export default class AddGame extends PureComponent {
                                 placeholder="Nombre del juego"
                                 labelText="Nombre del juego"
                                 id="gameName"
+                                autoFocus={true}
                             />
                         </div>
                         <div className="admin-index-form__field p-b-4">
