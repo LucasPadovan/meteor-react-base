@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import GradientDivisor from 'ds/basic/GradientDivisor';
 import Card from 'ds/basic/Card';
 import Stepper from 'ds/basic/Stepper';
+import LoadingBar from 'ds/basic/LoadingBar';
 
 import { MENU_KEYS } from 'ds/basic/navigation/constants';
 
@@ -19,7 +20,7 @@ export default class DsIndex extends Component {
                     <h1>Visor de componentes</h1>
                     <GradientDivisor marginVertical={3} />
 
-                    <section className="flex p-b-5">
+                    <section className="flex p-b-10">
                         <div className="flex-item-1-1 p-r-2">
                             <h2 className="p-b-3">Card component</h2>
                             <Card>
@@ -35,14 +36,19 @@ export default class DsIndex extends Component {
                         </div>
                     </section>
 
-                    <section className="p-b-5">
+                    <section className="p-b-10">
                         <h2 className="p-b-3">Gradient divisor component</h2>
                         <GradientDivisor />
                     </section>
 
-                    <section className="p-b-5">
+                    <section className="p-b-10">
                         <h2 className="p-b-3">Stepper component</h2>
                         <Stepper />
+                    </section>
+
+                    <section className="p-b-10  ">
+                        <h2 className="p-b-3">Loading bar component</h2>
+                        <LoadingBar />
                     </section>
                 </div>
             </ManagerPage>
