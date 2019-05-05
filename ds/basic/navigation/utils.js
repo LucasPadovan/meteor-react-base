@@ -19,6 +19,16 @@ const _getMenuItems = (resourceId) => (
     ]
 );
 
+const _getManagerMenuItems = () => (
+    [
+        {
+            title: 'Design System',
+            link: '/manager/ds',
+            key: MENU_KEYS.ds,
+        },
+    ]
+);
+
 const ENABLED_MENU_ITEMS = [MENU_KEYS.games];
 
 export const getMenuItems = (resourceId) => {
@@ -30,3 +40,7 @@ export const getMenuItems = (resourceId) => {
 
     return menuItems;
 };
+
+export const getManagerMenuItems = (resourceId) => (
+    _getManagerMenuItems(resourceId)
+);

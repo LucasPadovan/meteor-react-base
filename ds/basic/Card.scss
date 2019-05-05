@@ -1,0 +1,8 @@
+@import "../settings/Theme.scss";
+@import "../settings/Settings.scss";
+
+.card {
+    box-shadow: 7px 7px 13px 0 rgba(0, 0, 0, 0.5);
+    border-radius: $grid-unit;
+    border: 1px solid $gray-20;
+}

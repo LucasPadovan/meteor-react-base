@@ -21,10 +21,9 @@ const PublicMenu = () => (
     </ul>
 );
 
-const AdminMenu = ({ onLogoutClick }) => (
+const ManagerMenu = () => (
     <ul className="nav-menu">
-        <NavItem title="Juegos" to="/admin/games" />
-        <NavItem title="Logout" to="/" onClick={onLogoutClick} />
+        <NavItem title="Ds" to="/manager/ds" />
     </ul>
 );
 
@@ -39,8 +38,8 @@ const AuthenticatedMenu = ({ user: { username }, onLogoutClick }) => (
 class Navbar extends PureComponent {
     static defaultProps = {
         user: {
-            username: ''
-        }
+            username: '',
+        },
     }
 
     constructor(props) {
@@ -97,6 +96,8 @@ class Navbar extends PureComponent {
 
                     <div className={menuClassName}>
                         {menuItems}
+
+                        <ManagerMenu />
                     </div>
                 </div>
             </nav>
