@@ -3,7 +3,6 @@ import classNames from 'classnames';
 
 import { ImagesCollection } from '/shared/imageHelpers';
 
-import './ImageUploader.scss';
 
 // TODO: use a REF that is not a string.
 // TODO: Should upload to S3, flicker or something like that.
