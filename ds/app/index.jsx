@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 
-import GradientDivisor from 'ds/basic/GradientDivisor';
 import Card from 'ds/basic/Card';
-import Stepper from 'ds/basic/Stepper';
+import GradientDivisor from 'ds/basic/GradientDivisor';
 import LoadingBar from 'ds/basic/LoadingBar';
+import Pill from 'ds/basic/Pill';
+import Stepper from 'ds/basic/Stepper';
 
 import { MENU_KEYS } from 'ds/basic/navigation/constants';
 
@@ -49,6 +50,11 @@ export default class DsIndex extends Component {
                     <section className="p-b-10  ">
                         <h2 className="p-b-3">Loading bar component</h2>
                         <LoadingBar />
+                    </section>
+
+                    <section className="p-b-10  ">
+                        <h2 className="p-b-3">Pill component</h2>
+                        <Pill text="A pill component" />
                     </section>
                 </div>
             </ManagerPage>
