@@ -5,6 +5,7 @@ import GradientDivisor from 'ds/basic/GradientDivisor';
 import LoadingBar from 'ds/basic/LoadingBar';
 import Pill from 'ds/basic/Pill';
 import Stepper from 'ds/basic/Stepper';
+import Table from 'ds/basic/Table';
 
 import { MENU_KEYS } from 'ds/basic/navigation/constants';
 
@@ -55,6 +56,26 @@ export default class DsIndex extends Component {
                     <section className="p-b-10">
                         <h2 className="p-b-3">Pill component</h2>
                         <Pill text="A pill component" />
+                    </section>
+
+                    <section className="p-b-10">
+                        <h2 className="p-b-3">Table component</h2>
+                        <Table
+                            headerRow={[
+                                { title: 'first column title' },
+                                { title: 'second column title' },
+                            ]}
+                            bodyRows={[
+                                [
+                                    { item: 'first item ' },
+                                    { item: 'second item' },
+                                ],
+                                [
+                                    { item: 'another first item' },
+                                    { item: 'another second item' },
+                                ],
+                            ]}
+                        />
                     </section>
                 </div>
             </ManagerPage>

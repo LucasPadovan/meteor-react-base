@@ -2,9 +2,9 @@ import React, { Component } from 'react';
 import { Meteor } from 'meteor/meteor';
 import { withTracker } from 'meteor/react-meteor-data';
 import { Link } from 'react-router-dom';
-import Button from 'ds/basic/Button';
 
-import Table from '../../common/Table';
+import Button from 'ds/basic/Button';
+import Table from 'ds/basic/Table';
 
 import Games from '../../../api/games';
 

@@ -100,17 +100,15 @@ export default class Table extends PureComponent {
         } = this.props;
 
         return (
-            <div className="styled-table__wrapper">
-                <table className="styled-table">
-                    <thead>
-                        <TableHeader headerRow={headerRow} headerExtraClass={headerExtraClass} />
-                    </thead>
+            <table className="styled-table">
+                <thead>
+                    <TableHeader headerRow={headerRow} headerExtraClass={headerExtraClass} />
+                </thead>
 
-                    <tbody>
-                        <TableBody bodyRows={bodyRows} bodyExtraClass={bodyExtraClass} />
-                    </tbody>
-                </table>
-            </div>
+                <tbody>
+                    <TableBody bodyRows={bodyRows} bodyExtraClass={bodyExtraClass} />
+                </tbody>
+            </table>
         );
     }
 }

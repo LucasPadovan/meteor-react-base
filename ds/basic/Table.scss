@@ -1,19 +1,19 @@
-.styled-table__wrapper {
-    border-radius: 10px;
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 20px;
-}
+@import "../settings/Theme.scss";
+@import "../settings/Settings.scss";
+
+$table-border: 1px solid $brand-primary;
 
 .styled-table {
+    border-radius: $grid-unit;
+    border: $table-border;
+    border-spacing: 0;
     width: 100%;
 }
 
-.styled-table__header-row {
-    border-bottom: 2px solid #FC40B6;
-}
-
-.styled-table__header-row__title {
-    padding: 20px;
+.styled-table__header-row__title,
+.styled-table__body-row-item {
+    padding: $grid-unit * 3;
+    border: $table-border;
 }
 
 .styled-table__body-row {
@@ -22,10 +22,6 @@
     &:hover {
         background-color: rgba(0, 0, 0, 0.5);
     }
-}
-
-.styled-table__body-row-item {
-    padding: 20px;
 }
 
 .styled-table__body-row-item__image {
