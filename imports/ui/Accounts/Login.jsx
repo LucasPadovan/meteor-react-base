@@ -21,29 +21,29 @@ class Login extends PureComponent {
         };
     }
 
-    _handleEmailChange(event) {
+    _handleEmailChange = (event) => {
         this.setState({
             email: event.target.value,
         });
     }
 
-    _handlePasswordChange(event) {
+    _handlePasswordChange = (event) => {
         this.setState({
             password: event.target.value,
         });
     }
 
-    _handleLoginSubmit(event) {
+    _handleLoginSubmit = (event) => {
         event.preventDefault();
 
-        let { email, password } = this.state;
+        const { email, password } = this.state;
 
         auth.authenticate({
             email,
             password,
             onLoginSucceeded: () => {
                 this.setState({ redirectToReferrer: true });
-            }
+            },
         });
     }
 
@@ -62,8 +62,8 @@ class Login extends PureComponent {
             );
         }
 
-        let body = (
-            <form className="login__form" onSubmit={this._handleLoginSubmit.bind(this)}>
+        const body = (
+            <form className="login__form" onSubmit={this._handleLoginSubmit}>
                 <InputField
                     type="text"
                     className="p-b-4"
@@ -72,7 +72,7 @@ class Login extends PureComponent {
                     placeholder="Ingresa tu nombre de usuario"
                     autoComplete="username"
                     value={this.state.email}
-                    onChange={this._handleEmailChange.bind(this)}
+                    onChange={this._handleEmailChange}
                     labelText="Nombre de usuario"
                 />
                 <InputField
@@ -82,7 +82,7 @@ class Login extends PureComponent {
                     placeholder="Contraseña"
                     autoComplete="password"
                     value={this.state.password}
-                    onChange={this._handlePasswordChange.bind(this)}
+                    onChange={this._handlePasswordChange}
                     labelText="Contraseña"
                 />
                 {loginFailedComponent}
@@ -105,8 +105,6 @@ class Login extends PureComponent {
     }
 }
 
-export default withTracker(() => {
-    return {
-        isAuthenticated: !!Meteor.userId(),
-    };
-})(Login);
+export default withTracker(() => ({
+    isAuthenticated: !!Meteor.userId(),
+}))(Login);
