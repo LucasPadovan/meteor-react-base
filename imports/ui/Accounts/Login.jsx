@@ -7,6 +7,8 @@ import InputField from 'ds/basic/InputField';
 
 import { auth } from '../utils/authentication';
 
+import './Login.scss';
+
 class Login extends PureComponent {
     constructor(props) {
         super(props);
@@ -61,32 +63,28 @@ class Login extends PureComponent {
         }
 
         let body = (
-            <form onSubmit={this._handleLoginSubmit.bind(this)}>
-                <div className="form-group">
-                    <InputField
-                        type="text"
-                        className="form-control"
-                        id="username-input"
-                        aria-describedby="username"
-                        placeholder="Ingresa tu nombre de usuario"
-                        autoComplete="username"
-                        value={this.state.email}
-                        onChange={this._handleEmailChange.bind(this)}
-                        labelText="Nombre de usuario"
-                    />
-                </div>
-                <div className="form-group">
-                    <InputField
-                        type="password"
-                        className="form-control"
-                        id="password-input"
-                        placeholder="Contraseña"
-                        autoComplete="password"
-                        value={this.state.password}
-                        onChange={this._handlePasswordChange.bind(this)}
-                        labelText="Contraseña"
-                    />
-                </div>
+            <form className="login__form" onSubmit={this._handleLoginSubmit.bind(this)}>
+                <InputField
+                    type="text"
+                    className="p-b-4"
+                    id="username-input"
+                    aria-describedby="username"
+                    placeholder="Ingresa tu nombre de usuario"
+                    autoComplete="username"
+                    value={this.state.email}
+                    onChange={this._handleEmailChange.bind(this)}
+                    labelText="Nombre de usuario"
+                />
+                <InputField
+                    type="password"
+                    className="p-b-4"
+                    id="password-input"
+                    placeholder="Contraseña"
+                    autoComplete="password"
+                    value={this.state.password}
+                    onChange={this._handlePasswordChange.bind(this)}
+                    labelText="Contraseña"
+                />
                 {loginFailedComponent}
                 <Button
                     text="Login"
@@ -100,7 +98,7 @@ class Login extends PureComponent {
         }
 
         return (
-            <div>
+            <div className="login-page">
                 {body}
             </div>
         );

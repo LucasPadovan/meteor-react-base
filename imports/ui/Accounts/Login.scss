@@ -1,0 +1,20 @@
+@import '../../../ds/settings/Settings.scss';
+@import '../../../ds/settings/Theme.scss';
+
+.login-page {
+    height: 100%;
+    padding: $grid-unit * 5;
+}
+
+.login__form {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+@media(min-width: $medium-w) {
+    .login-page {
+        padding-left: $grid-unit * 10;
+        padding-right: $grid-unit * 10;
+    }
+}

@@ -1,6 +1,5 @@
 @import "../../../ds/settings/Theme.scss";
 @import "../../../ds/settings/Settings.scss";
-@import "../../../ds/settings/Helpers.scss";
 
 .admin-page {
     display: flex;
@@ -12,7 +11,7 @@
     }
 
     .admin-page__content {
-        @extend .p-5;
+        padding: $grid-unit * 5;
 
         flex: 1 1 auto;
     }
