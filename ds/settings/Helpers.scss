@@ -44,3 +44,33 @@ $sides: (top, bottom, left, right);
 
 }
 /* END: Paddings and margins */
+
+/* Start: Flex things */
+.flex {
+  display: flex;
+
+  &--column {
+    flex-direction: column;
+  }
+
+  &--wrap {
+    flex-wrap: wrap;
+  }
+}
+
+.flex-item-1-1 {
+  flex: 1 1 auto;
+}
+
+.flex-item-0-1 {
+  flex: 0 1 auto;
+}
+
+.flex-item-1-0 {
+  flex: 1 0 auto;
+}
+
+.flex-item-0-0 {
+  flex: 0 0 auto;
+}
+/* END: Flex things */
