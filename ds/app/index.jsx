@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 
 import GradientDivisor from 'ds/basic/GradientDivisor';
 import Card from 'ds/basic/Card';
+import Stepper from 'ds/basic/Stepper';
 
 import { MENU_KEYS } from 'ds/basic/navigation/constants';
 
@@ -37,6 +38,11 @@ export default class DsIndex extends Component {
                     <section className="p-b-5">
                         <h2 className="p-b-3">Gradient divisor component</h2>
                         <GradientDivisor />
+                    </section>
+
+                    <section className="p-b-5">
+                        <h2 className="p-b-3">Stepper component</h2>
+                        <Stepper />
                     </section>
                 </div>
             </ManagerPage>

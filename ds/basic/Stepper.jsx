@@ -1,6 +1,5 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
-import classNames from 'classnames';
 
 import './Stepper.scss';
 
@@ -11,6 +10,11 @@ export default class Stepper extends PureComponent {
         minValue: PropTypes.number,
         maxValue: PropTypes.number,
         step: PropTypes.number,
+        /*
+         * Linked value is neccesary when using 2 or more steppers at the same time
+         * will allow to disable the increase/decrease buttons when a summatory of 2 or more steppers surpasses the max value
+         */
+        linkedValue: PropTypes.number,
         currentSumatory: PropTypes.number,
         onClickDecrease: PropTypes.func,
         onClickIncrease: PropTypes.func,
@@ -22,6 +26,7 @@ export default class Stepper extends PureComponent {
         minValue: 0,
         maxValue: 10,
         step: 1,
+        linkedValue: 0,
         currentSumatory: 0,
         onClickDecrease() {},
         onClickIncrease() {},
@@ -96,10 +101,14 @@ export default class Stepper extends PureComponent {
         const { value } = this.state;
 
         let isIncreaseButtonDisabled = false;
-        const newValue = value + step;
+        let newValue = value + step;
         const isDecreaseButtonDisabled = newValue < minValue;
 
-        if (newValue + linkedValue >= maxValue) {
+        if (linkedValue) {
+            newValue += linkedValue;
+        }
+
+        if (newValue >= maxValue) {
             isIncreaseButtonDisabled = true;
         }
 
@@ -145,7 +154,9 @@ export default class Stepper extends PureComponent {
             <div className="stepper">
                 {stepperButtonDecrease}
 
-                {value}
+                <div className="stepper__value">
+                    {value}
+                </div>
 
                 {stepperButtonIncrease}
             </div>
