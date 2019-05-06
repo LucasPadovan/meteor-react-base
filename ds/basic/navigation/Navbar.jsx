@@ -18,6 +18,7 @@ import './Navbar.scss';
 const PublicMenu = () => (
     <ul className="nav-menu">
         <NavItem title="Login" to="/login" />
+        <NavItem title="SignIn" to="/signin" />
     </ul>
 );
 

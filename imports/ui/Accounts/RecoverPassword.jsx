@@ -1,11 +1,7 @@
 import { Meteor } from 'meteor/meteor';
 import { withTracker } from 'meteor/react-meteor-data';
-import React, { PureComponent } from 'react';
-import {
-    Link,
-    Redirect,
-    withRouter,
-} from 'react-router-dom';
+import React, { Component } from 'react';
+import { Redirect, withRouter } from 'react-router-dom';
 import Button from 'ds/basic/Button';
 import InputField from 'ds/basic/InputField';
 
@@ -13,13 +9,12 @@ import { auth } from '../utils/authentication';
 
 import './Login.scss';
 
-class Login extends PureComponent {
+class RecoverPassword extends Component {
     constructor(props) {
         super(props);
 
         this.state = {
             email: '',
-            password: '',
             hasError: false,
             redirectToReferrer: false,
         };
@@ -31,40 +26,24 @@ class Login extends PureComponent {
         });
     }
 
-    _handlePasswordChange = (event) => {
-        this.setState({
-            password: event.target.value,
-        });
-    }
-
-    _handleLoginSubmit = (event) => {
+    _handlePasswordChangeSubmit = (event) => {
         event.preventDefault();
 
-        const { email, password } = this.state;
+        const { email } = this.state;
 
-        auth.authenticate({
-            email,
-            password,
-            onLoginSucceeded: () => {
-                this.setState({ redirectToReferrer: true });
-            },
-        });
+        // auth.authenticate({
+        //     email,
+        //     password,
+        //     onLoginSucceeded: () => {
+        //         this.setState({ redirectToReferrer: true });
+        //     },
+        // });
     }
 
     render() {
         const { isAuthenticated } = this.props;
         const { hasError } = this.state;
         const { from } = this.props.location.state || { from: { pathname: '/' } };
-
-        let loginFailedComponent = null;
-
-        if (hasError) {
-            loginFailedComponent = (
-                <div>
-                    Nombre de usuario o contraseña equivocada.
-                </div>
-            );
-        }
 
         const body = (
             <form className="login__form" onSubmit={this._handleLoginSubmit}>
@@ -73,30 +52,17 @@ class Login extends PureComponent {
                     className="p-b-4"
                     id="email-input"
                     aria-describedby="Email"
-                    placeholder="Ingresa tu email"
-                    autoComplete="Email"
+                    placeholder="Ingresa tu Email"
+                    autoComplete="username"
                     value={this.state.email}
                     onChange={this._handleEmailChange}
                     labelText="Email"
                     autoFocus={true}
                 />
-                <InputField
-                    type="password"
-                    className="p-b-4"
-                    id="password-input"
-                    placeholder="Contraseña"
-                    autoComplete="password"
-                    value={this.state.password}
-                    onChange={this._handlePasswordChange}
-                    labelText="Contraseña"
-                />
-                {loginFailedComponent}
                 <Button
-                    text="Login"
+                    text="Recuperar contraseña"
                     type="submit"
                 />
-
-                <Link className="p-t-6 p-h-3" to="/recover-password">Olvidé mi contraseña</Link>
             </form>
         );
 
@@ -114,4 +80,4 @@ class Login extends PureComponent {
 
 export default withTracker(() => ({
     isAuthenticated: !!Meteor.userId(),
-}))(Login);
+}))(RecoverPassword);

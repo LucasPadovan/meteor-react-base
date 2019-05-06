@@ -21,6 +21,8 @@ import AdminGames from '../imports/ui/Admin/Games/index';
 import UsersList from '../imports/ui/Users/index';
 import NewUser from '../imports/ui/Users/NewUser';
 import Login from '../imports/ui/Accounts/Login';
+import RecoverPassword from '../imports/ui/Accounts/RecoverPassword';
+import SignIn from '../imports/ui/Accounts/SignIn';
 
 import './Container.scss';
 
@@ -34,6 +36,8 @@ const Container = ({ location }) => (
             <Switch location={location}>
                 <Route exact path="/" component={Homepage} />
                 <Route exact path="/login" component={Login} />
+                <Route exact path="/signin" component={SignIn} />
+                <Route exact path="/recover-password" component={RecoverPassword} />
 
                 {/* Admin routes */}
                 <PrivateRoute exact path="/admin/games" component={AdminGames} />
