@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Footer from '../../common/Footer';
+import Footer from '../Footer';
 
 import './index.scss';
 

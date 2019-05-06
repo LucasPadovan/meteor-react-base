@@ -1,10 +1,10 @@
-import React, { PureComponent } from 'react';
+import React, { Component } from 'react';
 
 import Button from 'ds/basic/Button';
 
 import './StateSwitcher.scss';
 
-export default class StateSwitcher extends PureComponent {
+export default class StateSwitcher extends Component {
     render() {
         const { state, possibleStates, onButtonClick } = this.props;
         const component = possibleStates.map(({ display, actionDisplay, value }) => {

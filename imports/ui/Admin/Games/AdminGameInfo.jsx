@@ -7,7 +7,7 @@ import GradientDivisor from 'ds/basic/GradientDivisor';
 import InputField from 'ds/basic/InputField';
 import ImageUploader from 'ds/advanced/ImageUploader';
 
-import AdminPage from '../../common/AdminPage';
+import AdminPage from '../AdminPage';
 import NotificationTemporary from '../../common/NotificationTemporary';
 
 import { MENU_KEYS } from '../../common/navigation/constants';

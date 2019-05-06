@@ -5,7 +5,7 @@ import AccordionMenu from 'ds/basic/navigation/AccordionMenu';
 
 import { getManagerMenuItems } from 'ds/basic/navigation/utils';
 
-import './AdminPage.scss';
+import '../Admin/AdminPage.scss';
 
 export default class ManagerPage extends PureComponent {
     state = {

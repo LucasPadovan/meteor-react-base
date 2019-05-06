@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import GradientDivisor from 'ds/basic/GradientDivisor';
 import { MENU_KEYS } from 'ds/basic/navigation/constants';
 
-import AdminPage from '../../common/AdminPage';
+import AdminPage from '../AdminPage';
 
 
 import AddGame from './AddGame';

@@ -9,7 +9,7 @@ import Table from 'ds/basic/Table';
 
 import { MENU_KEYS } from 'ds/basic/navigation/constants';
 
-import ManagerPage from '../../imports/ui/common/ManagerPage';
+import ManagerPage from '../../imports/ui/Manager/ManagerPage';
 
 
 export default class DsIndex extends Component {

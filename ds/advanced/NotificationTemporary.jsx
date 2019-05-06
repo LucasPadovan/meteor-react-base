@@ -1,9 +1,9 @@
-import React, { PureComponent } from 'react';
+import React, { Component } from 'react';
 
-import Notification from './Notification';
+import Notification from '../basic/Notification';
 
 
-export default class NotificationTemporary extends PureComponent {
+export default class NotificationTemporary extends Component {
     constructor(props) {
         super(props);
 
